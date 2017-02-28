@@ -10,7 +10,6 @@ import UIKit
 import DGElasticPullToRefresh
 import SVProgressHUD
 
-
 class HomeViewController: UITableViewController {
 
     var dataSource = NSMutableArray()
@@ -27,10 +26,18 @@ class HomeViewController: UITableViewController {
         
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
         loadingView.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        tableView.dg_addPullToRefreshWithActionHandler({ 
-            _ = LiveObj.init(a: self.dataSource, t: self.tableView)
-//            self.tableView.reloadData()
-
+        tableView.dg_addPullToRefreshWithActionHandler({
+            if canRefresh {
+                canRefresh = false
+                _ = LiveObj.init(a: self.dataSource, t: self.tableView)
+                SVProgressHUD.setMaximumDismissTimeInterval(2)
+                SVProgressHUD.setDefaultMaskType(.gradient)
+                SVProgressHUD.showSuccess(withStatus: "刷新完成!")
+                
+            } else {
+                SVProgressHUD.setMaximumDismissTimeInterval(2)
+                SVProgressHUD.showError(withStatus: "刚刚刷新过哦!")
+            }
             self.tableView.dg_stopLoading()
         }, loadingView: loadingView)
         tableView.dg_setPullToRefreshFillColor(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))
@@ -54,8 +61,9 @@ class HomeViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! LiveCell
-        cell.liveObj = dataSource[indexPath.row] as! LiveObj
-        
+        if dataSource.count > indexPath.row {
+            cell.liveObj = dataSource[indexPath.row] as! LiveObj
+        }
 
         return cell
     }

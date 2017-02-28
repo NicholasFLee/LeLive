@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import SVProgressHUD
 
+var canRefresh: Bool = false
+
 class LiveObj: NSObject {
     
     var creator = CreatorObj()
@@ -20,6 +22,7 @@ class LiveObj: NSObject {
     var stream_addr = String()
     var slot = NSNumber()
     var online_users = NSNumber()
+    
 //    let labels: Array
     
     override init() {
@@ -36,7 +39,7 @@ class LiveObj: NSObject {
             let lives = dic["lives"] as! NSArray
             
             for i in 0...199 {
-            
+                
                 let obj = LiveObj.init()
                 let creator = CreatorObj.init()
                 
@@ -59,18 +62,12 @@ class LiveObj: NSObject {
                 obj.online_users = live["online_users"] as! NSNumber
                 a.add(obj)
                 
-                
             }
             
+            canRefresh = true
             t.reloadData()
             SVProgressHUD.dismiss()
         }
-        
-        
-        
-       
-        
-        
     }
     
     

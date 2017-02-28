@@ -17,6 +17,7 @@ class LiveViewController: UIViewController {
         let bgi = UIImageView.init(frame: UIScreen.main.bounds)
         bgi.kf.setImage(with: URL.init(string:obj.creator.portrait))
         bgi.contentMode = .scaleAspectFill
+        bgi.alpha = 0.7
         view.addSubview(bgi)
         player = IJKFFMoviePlayerController(contentURLString: obj.stream_addr, with: nil)
         player.prepareToPlay()
@@ -25,6 +26,7 @@ class LiveViewController: UIViewController {
         
         let b = UIButton.init(frame: CGRect.init(x: 305, y: 627, width: 50, height: 20))
         b.setTitle("Close", for: .normal)
+        b.setTitleColor(UIColor.black, for: .normal)
         self.view.addSubview(b)
         b.addTarget(self, action: #selector(closeButtonDidClick), for: .touchUpInside)
     }
