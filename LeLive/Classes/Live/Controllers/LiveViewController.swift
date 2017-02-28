@@ -14,10 +14,14 @@ class LiveViewController: UIViewController {
     var player = IJKFFMoviePlayerController()
     override func viewDidLoad() {
         super.viewDidLoad()
+        let bgi = UIImageView.init(frame: UIScreen.main.bounds)
+        bgi.kf.setImage(with: URL.init(string:obj.creator.portrait))
+        bgi.contentMode = .scaleAspectFill
+        view.addSubview(bgi)
         player = IJKFFMoviePlayerController(contentURLString: obj.stream_addr, with: nil)
         player.prepareToPlay()
         player.view.frame = UIScreen.main.bounds
-        self.view.insertSubview(player.view, at: 0)
+        self.view.insertSubview(player.view, at: 1)
         
         let b = UIButton.init(frame: CGRect.init(x: 305, y: 627, width: 50, height: 20))
         b.setTitle("Close", for: .normal)

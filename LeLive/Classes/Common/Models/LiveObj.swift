@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SVProgressHUD
 
 class LiveObj: NSObject {
     
@@ -27,7 +28,7 @@ class LiveObj: NSObject {
     
     
     init(a: NSMutableArray, t: UITableView) {
-
+        a.removeAllObjects()
         let url = URL.init(string: "http://116.211.167.106/api/live/aggregation?uid=314181862&interest=1")
         
         Alamofire.request( url!).responseJSON { (response) in
@@ -58,9 +59,11 @@ class LiveObj: NSObject {
                 obj.online_users = live["online_users"] as! NSNumber
                 a.add(obj)
                 
+                
             }
-            t.reloadData()
             
+            t.reloadData()
+            SVProgressHUD.dismiss()
         }
         
         

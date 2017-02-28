@@ -7,18 +7,42 @@
 //
 
 import UIKit
+import DGElasticPullToRefresh
+import SVProgressHUD
+
 
 class HomeViewController: UITableViewController {
 
     var dataSource = NSMutableArray()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        SVProgressHUD.show(withStatus: "加载数据中!")
         self.title = "List"
         self.tableView.separatorStyle = .none
         _ = LiveObj.init(a: dataSource, t: self.tableView)
         
         self.tableView.register(UINib.init(nibName: "LiveCell", bundle: nil), forCellReuseIdentifier: "reuseIdentifier")
+        
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        tableView.dg_addPullToRefreshWithActionHandler({ 
+            _ = LiveObj.init(a: self.dataSource, t: self.tableView)
+//            self.tableView.reloadData()
+
+            self.tableView.dg_stopLoading()
+        }, loadingView: loadingView)
+        tableView.dg_setPullToRefreshFillColor(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))
+        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+        
+        
+    }
+    
+    deinit {
+        
+        
+        tableView.dg_removePullToRefresh()
     }
 
     // MARK: - Table view data source

@@ -11,5 +11,7 @@ pod 'Alamofire'
 pod 'SnapKit'
 pod 'Kingfisher'
 pod 'SVProgressHUD'
+pod 'DGElasticPullToRefresh'
+
 
 end
