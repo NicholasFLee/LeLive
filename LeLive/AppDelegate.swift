@@ -14,15 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        
+
         let vc = HomeViewController()
         let ac = AudioViewController()
         let anc = UINavigationController.init(rootViewController: ac)
         let vnc = UINavigationController.init(rootViewController: vc)
         let tabBarC = UITabBarController.init()
-        tabBarC.viewControllers = [anc, vnc]
-        
+        tabBarC.viewControllers = [vnc, anc]
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.rootViewController = tabBarC

@@ -9,7 +9,11 @@
 import UIKit
 
 class AudioViewController: UIViewController {
-    var loadingIv = UIImageView()
+    var loadingIv = UIImageView() {
+        willSet {
+            loadingIv.removeFromSuperview()
+        }
+    }
     var audioPlayer = AVPlayer() {
         willSet {
             print("status info:\(audioPlayer.observationInfo)")
@@ -24,11 +28,12 @@ class AudioViewController: UIViewController {
         
         
     }
+    
+    let audioView = AudioView.init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "UK Radios"
-        let audioView = AudioView.init()
         audioView.frame = BOUNDS
         self.view.addSubview(audioView)
     
@@ -73,21 +78,14 @@ class AudioViewController: UIViewController {
             switch self.audioPlayer.status.rawValue {
             case 0:
 //                loadingIv.removeFromSuperview()
-                
-                
-
                 print("status unknow")
-                
-                
             case 1:
                 
 //                loadingIv.removeFromSuperview()
                 print("status readyToPlay")
                 
             case 2:
-                
                 print("status failed")
-                
             default:
                 break
             }
@@ -106,11 +104,7 @@ class AudioViewController: UIViewController {
             case .waitingToPlayAtSpecifiedRate:
                 print("cs waitingToPlayAtSpecifiedRate ")
                 
-            default:
-                break
             }
-            
-            
         }
         
     }
@@ -122,23 +116,26 @@ class AudioViewController: UIViewController {
             if self.audioPlayer.status.rawValue == 0 {
                 let url = URL.init(string: StreamURLS[0])!
                 self.audioPlayer = AVPlayer.init(url: url)
+                let cell = self.audioView.cellForItem(at: IndexPath.init(item: 0, section: 0)) as! AudioCell
+                cell.itemAnimationClosure()
             }
             self.audioPlayer.play()
             self.navigationItem.leftBarButtonItem?.image = #imageLiteral(resourceName: "stop")
             // loading animation
             
-            
             self.loadingIv = UIImageView.init(image: #imageLiteral(resourceName: "loading"))
             self.loadingIv.layer.add(loadingAnimation(), forKey: nil)
             self.loadingIv.frame = CGRect.init(x: 19.5, y: 4.5, width: 33, height: 33)
             self.navigationController?.navigationBar.addSubview(loadingIv)
-            
+            seCell.itemAnimationClosure()
             
             
         } else if audioPlayer.timeControlStatus.hashValue == 2 || audioPlayer.timeControlStatus.hashValue == 1{
             self.audioPlayer.pause()
             self.navigationItem.leftBarButtonItem?.image = #imageLiteral(resourceName: "play")
-//            self.loadingIv.removeFromSuperview()
+            self.loadingIv.removeFromSuperview()
+            iview.removeFromSuperview()
+
         }
         
         
@@ -148,8 +145,9 @@ class AudioViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.audioPlayer.pause()
-        
-        
+        self.loadingIv.removeFromSuperview()
+        self.navigationItem.leftBarButtonItem?.image = #imageLiteral(resourceName: "play")
+        iview.removeFromSuperview()
     }
     
     func loadingAnimation() -> CABasicAnimation {
@@ -157,12 +155,12 @@ class AudioViewController: UIViewController {
         basic.fromValue = NSNumber.init(value: 0)
         basic.toValue = NSNumber.init(value: M_PI * 2)
         basic.duration = 2
-        basic.repeatCount = 10
+        basic.repeatCount = MAXFLOAT
         return basic
     }
 
-  
-    
+
+
 
 
 

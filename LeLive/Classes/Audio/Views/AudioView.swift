@@ -8,6 +8,7 @@
 
 import UIKit
 
+var seCell = AudioCell()
 
 class AudioView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -48,16 +49,26 @@ class AudioView: UICollectionView, UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reuseIdentifier", for: indexPath) as! AudioCell
-        
         cell.label.text = titleS[indexPath.row]
         cell.imageView.image = iconURLS[indexPath.row]
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("click\(indexPath.row)")
         closure(indexPath.row)
+        let cell = collectionView.cellForItem(at: indexPath) as! AudioCell
+        iview.removeFromSuperview()
+        cell.itemAnimationClosure()
+        seCell = cell
+//        cell?.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        
+        
     }
+    
+    
+    
+    
     
 
 }
