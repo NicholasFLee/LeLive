@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import DGElasticPullToRefresh
 import SVProgressHUD
+import DGElasticPullToRefresh
 
 class HomeViewController: UITableViewController {
 
@@ -43,7 +43,6 @@ class HomeViewController: UITableViewController {
         tableView.dg_setPullToRefreshFillColor(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))
         tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
         
-        
     }
     
     deinit {
@@ -73,9 +72,12 @@ class HomeViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+
         let l = LiveViewController()
         l.obj = dataSource[indexPath.row] as! LiveObj
         self.navigationController?.pushViewController(l, animated: true)
+        
     }
 
 

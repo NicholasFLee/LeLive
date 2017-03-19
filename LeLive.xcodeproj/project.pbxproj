@@ -22,6 +22,12 @@
 		E1210A131E6531B600BD816F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1210A121E6531B600BD816F /* OpenGLES.framework */; };
 		E1210A161E6531DD00BD816F /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E1210A151E6531DD00BD816F /* libstdc++.tbd */; };
 		E1210A221E6532B400BD816F /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1210A211E6532B400BD816F /* IJKMediaFramework.framework */; };
+		E143CF181E7D9A15009A1FCE /* ItemIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E143CF171E7D9A15009A1FCE /* ItemIcon.xcassets */; };
+		E143CF1E1E7D9BF0009A1FCE /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E143CF1D1E7D9BF0009A1FCE /* AudioViewController.swift */; };
+		E18D1E591E7DAEB800888121 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D1E581E7DAEB800888121 /* AudioView.swift */; };
+		E18D1E5B1E7DB59500888121 /* AudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D1E5A1E7DB59500888121 /* AudioCell.swift */; };
+		E18D1E5D1E7DB9B800888121 /* AudioObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D1E5C1E7DB9B800888121 /* AudioObj.swift */; };
+		E18D1E5F1E7DC0F800888121 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D1E5E1E7DC0F800888121 /* Item.swift */; };
 		E1B31ACE1E641E4300ECEE2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B31ACD1E641E4300ECEE2C /* AppDelegate.swift */; };
 		E1B31AD31E641E4300ECEE2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1B31AD11E641E4300ECEE2C /* Main.storyboard */; };
 		E1B31AD51E641E4300ECEE2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B31AD41E641E4300ECEE2C /* Assets.xcassets */; };
@@ -52,6 +58,12 @@
 		E1210A121E6531B600BD816F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E1210A151E6531DD00BD816F /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		E1210A211E6532B400BD816F /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = LeLive/IJKMediaFramework.framework; sourceTree = "<group>"; };
+		E143CF171E7D9A15009A1FCE /* ItemIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ItemIcon.xcassets; sourceTree = "<group>"; };
+		E143CF1D1E7D9BF0009A1FCE /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		E18D1E581E7DAEB800888121 /* AudioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
+		E18D1E5A1E7DB59500888121 /* AudioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioCell.swift; sourceTree = "<group>"; };
+		E18D1E5C1E7DB9B800888121 /* AudioObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioObj.swift; sourceTree = "<group>"; };
+		E18D1E5E1E7DC0F800888121 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E1B31ACA1E641E4300ECEE2C /* LeLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B31ACD1E641E4300ECEE2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1B31AD21E641E4300ECEE2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +132,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E143CF191E7D9B51009A1FCE /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				E143CF1B1E7D9B51009A1FCE /* Models */,
+				E143CF1C1E7D9B51009A1FCE /* Views */,
+				E143CF1A1E7D9B51009A1FCE /* Controllers */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		E143CF1A1E7D9B51009A1FCE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E143CF1D1E7D9BF0009A1FCE /* AudioViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E143CF1B1E7D9B51009A1FCE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E18D1E5C1E7DB9B800888121 /* AudioObj.swift */,
+				E18D1E5E1E7DC0F800888121 /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E143CF1C1E7D9B51009A1FCE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E18D1E581E7DAEB800888121 /* AudioView.swift */,
+				E18D1E5A1E7DB59500888121 /* AudioCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E1B31AC11E641E4300ECEE2C = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +201,7 @@
 			children = (
 				E1B31AD11E641E4300ECEE2C /* Main.storyboard */,
 				E1B31AD41E641E4300ECEE2C /* Assets.xcassets */,
+				E143CF171E7D9A15009A1FCE /* ItemIcon.xcassets */,
 				E1B31AD61E641E4300ECEE2C /* LaunchScreen.storyboard */,
 				E1B31AD91E641E4300ECEE2C /* Info.plist */,
 			);
@@ -165,6 +214,7 @@
 			children = (
 				E1B31AEA1E643E4B00ECEE2C /* Common */,
 				E1B31AEF1E643E4B00ECEE2C /* Home */,
+				E143CF191E7D9B51009A1FCE /* Audio */,
 				E1B31AF31E643E4B00ECEE2C /* Live */,
 			);
 			path = Classes;
@@ -336,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E143CF181E7D9A15009A1FCE /* ItemIcon.xcassets in Resources */,
 				E1B31AD81E641E4300ECEE2C /* LaunchScreen.storyboard in Resources */,
 				E1B31B041E646A1700ECEE2C /* LiveCell.xib in Resources */,
 				E1B31AD51E641E4300ECEE2C /* Assets.xcassets in Resources */,
@@ -402,7 +453,12 @@
 				E1B31B061E646A5800ECEE2C /* LiveCell.swift in Sources */,
 				E12109FD1E65306900BD816F /* LiveViewController.swift in Sources */,
 				E1B31ACE1E641E4300ECEE2C /* AppDelegate.swift in Sources */,
+				E18D1E5F1E7DC0F800888121 /* Item.swift in Sources */,
+				E18D1E5D1E7DB9B800888121 /* AudioObj.swift in Sources */,
+				E18D1E5B1E7DB59500888121 /* AudioCell.swift in Sources */,
+				E18D1E591E7DAEB800888121 /* AudioView.swift in Sources */,
 				E1B31AF91E643EB100ECEE2C /* Common.swift in Sources */,
+				E143CF1E1E7D9BF0009A1FCE /* AudioViewController.swift in Sources */,
 				E1B31AFF1E64408C00ECEE2C /* LiveObj.swift in Sources */,
 				E12109FB1E652EFB00BD816F /* HomeViewController.swift in Sources */,
 			);

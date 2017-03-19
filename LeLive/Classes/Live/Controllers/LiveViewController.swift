@@ -12,8 +12,10 @@ class LiveViewController: UIViewController {
     
     var obj = LiveObj()
     var player = IJKFFMoviePlayerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let bgi = UIImageView.init(frame: UIScreen.main.bounds)
         bgi.kf.setImage(with: URL.init(string:obj.creator.portrait))
         bgi.contentMode = .scaleAspectFill
@@ -24,11 +26,12 @@ class LiveViewController: UIViewController {
         player.view.frame = UIScreen.main.bounds
         self.view.insertSubview(player.view, at: 1)
         
-        let b = UIButton.init(frame: CGRect.init(x: 305, y: 627, width: 50, height: 20))
+        let b = UIButton.init(frame: CGRect.init(x: 305, y: 600, width: 50, height: 20))
         b.setTitle("Close", for: .normal)
         b.setTitleColor(UIColor.black, for: .normal)
         self.view.addSubview(b)
         b.addTarget(self, action: #selector(closeButtonDidClick), for: .touchUpInside)
+        
     }
     
     func closeButtonDidClick() {
@@ -37,11 +40,15 @@ class LiveViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.tabBarController?.tabBar.isHidden = true
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         player.pause()
         player.shutdown()
+        self.navigationController?.setNavigationBarHidden(false, animated:false)
+        self.tabBarController?.tabBar.isHidden = false
     }
 
     

@@ -12,6 +12,6 @@ pod 'SnapKit'
 pod 'Kingfisher'
 pod 'SVProgressHUD'
 pod 'DGElasticPullToRefresh'
-
+pod 'AudioKit', '~> 3.5'
 
 end

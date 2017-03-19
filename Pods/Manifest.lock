@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.3.0)
+  - AudioKit (3.5.3)
   - DGElasticPullToRefresh (1.1)
   - Kingfisher (3.5.0)
   - SnapKit (3.2.0)
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AudioKit (~> 3.5)
   - DGElasticPullToRefresh
   - Kingfisher
   - SnapKit
@@ -14,11 +16,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  AudioKit: bf2ebc611bb9b8107dcbe14f8356c761ee8fcc12
   DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 2c24e1ec8ff0f9f820051222bb549e5bd4265d80
+PODFILE CHECKSUM: 33f48e9959d1c10f923a4f2d10598676ec5fe332
 
 COCOAPODS: 1.2.0
