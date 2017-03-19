@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let anc = UINavigationController.init(rootViewController: ac)
         let vnc = UINavigationController.init(rootViewController: vc)
         let tabBarC = UITabBarController.init()
-        tabBarC.viewControllers = [vnc, anc]
+        tabBarC.viewControllers = [anc, vnc]
         
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)

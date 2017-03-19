@@ -24,6 +24,7 @@ class AudioCell: UICollectionViewCell {
 
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        label.font = UIFont.systemFont(ofSize: 13)
         
         imageView.snp.makeConstraints { (make) in
             make.width.height.equalTo(imageWidth)

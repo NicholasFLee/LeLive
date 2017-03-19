@@ -43,6 +43,9 @@ class HomeViewController: UITableViewController {
         tableView.dg_setPullToRefreshFillColor(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))
         tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
         
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.7036997676, green: 0.9950520396, blue: 0.9879503846, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+
     }
     
     deinit {
