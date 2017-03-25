@@ -214,8 +214,8 @@
 			children = (
 				E1B31AEA1E643E4B00ECEE2C /* Common */,
 				E1B31AEF1E643E4B00ECEE2C /* Home */,
-				E143CF191E7D9B51009A1FCE /* Audio */,
 				E1B31AF31E643E4B00ECEE2C /* Live */,
+				E143CF191E7D9B51009A1FCE /* Audio */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

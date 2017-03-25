@@ -23,12 +23,9 @@ class LiveObj: NSObject {
     var slot = NSNumber()
     var online_users = NSNumber()
     
-//    let labels: Array
-    
     override init() {
         super.init()
     }
-    
     
     init(a: NSMutableArray, t: UITableView) {
         a.removeAllObjects()
@@ -39,19 +36,15 @@ class LiveObj: NSObject {
             let lives = dic["lives"] as! NSArray
             
             for i in 0...199 {
-                
                 let obj = LiveObj.init()
                 let creator = CreatorObj.init()
-                
                 let live = lives[i] as! NSDictionary
                 let creDic = live["creator"] as! NSDictionary
-                
                 creator.uid = creDic["id"] as! NSNumber
                 creator.level = creDic["level"] as! NSNumber
                 creator.gender = creDic["gender"] as! NSNumber
                 creator.nick = creDic["nick"] as! String
                 creator.portrait = creDic["portrait"] as! String
-                
                 obj.creator = creator
                 obj.liveid = live["id"] as! String
                 obj.name = live["name"] as! String
@@ -61,17 +54,12 @@ class LiveObj: NSObject {
                 obj.slot = live["slot"] as! NSNumber
                 obj.online_users = live["online_users"] as! NSNumber
                 a.add(obj)
-                
             }
-            
             canRefresh = true
             t.reloadData()
             SVProgressHUD.dismiss()
         }
     }
-    
-    
-    
     
     
 }

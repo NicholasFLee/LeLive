@@ -13,9 +13,8 @@ var seCell = AudioCell()
 class AudioView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var audioPlayer = AVPlayer()
-    var closure: (_ i: Int) -> Void = {_ in
-        
-    }
+    var closure: (_ i: Int) -> Void = {_ in}
+    
     init() {
         let lo = UICollectionViewFlowLayout()
         lo.itemSize = itemSize
@@ -27,11 +26,6 @@ class AudioView: UICollectionView, UICollectionViewDataSource, UICollectionViewD
         self.dataSource = self
         self.backgroundColor = UIColor.white
         self.register(AudioCell.self, forCellWithReuseIdentifier: "reuseIdentifier")
-        
-        
-        
-        
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,6 +33,7 @@ class AudioView: UICollectionView, UICollectionViewDataSource, UICollectionViewD
     }
     
     
+    // MARK: - Table view data source
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -51,7 +46,6 @@ class AudioView: UICollectionView, UICollectionViewDataSource, UICollectionViewD
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reuseIdentifier", for: indexPath) as! AudioCell
         cell.label.text = titleS[indexPath.row]
         cell.imageView.image = iconURLS[indexPath.row]
-        
         return cell
     }
     
@@ -61,9 +55,6 @@ class AudioView: UICollectionView, UICollectionViewDataSource, UICollectionViewD
         iview.removeFromSuperview()
         cell.itemAnimationClosure()
         seCell = cell
-//        cell?.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        
-        
     }
     
     
