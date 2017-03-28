@@ -12,10 +12,12 @@ class LiveViewController: UIViewController {
     
     var obj = LiveObj()
     var player = IJKFFMoviePlayerController()
-    
+    var bgi = UIImageView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
         let bgi = UIImageView.init(frame: UIScreen.main.bounds)
+        self.bgi = bgi
         bgi.kf.setImage(with: URL.init(string:obj.creator.portrait))
         bgi.contentMode = .scaleAspectFill
         bgi.alpha = 0.7
@@ -32,6 +34,7 @@ class LiveViewController: UIViewController {
     }
     
     func closeButtonDidClick() {
+        self.bgi.removeFromSuperview()
         _ = self.navigationController?.popViewController(animated: true)
     }
     
@@ -40,7 +43,7 @@ class LiveViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated:false)
         self.tabBarController?.tabBar.isHidden = false
         player.pause()
