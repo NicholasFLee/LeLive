@@ -50,7 +50,7 @@ class AudioCell: UICollectionViewCell {
         let animationScale = CABasicAnimation.init(keyPath: "transform.scale")
         animationScale.fromValue = NSNumber.init(value: 0.6)
         animationScale.toValue = NSNumber.init(value: 1.3)
-        let animationCapacity = CABasicAnimation.init(keyPath: "capacity")
+        let animationCapacity = CABasicAnimation.init(keyPath: "opacity")
         animationCapacity.fromValue = NSNumber.init(value: 1)
         animationCapacity.toValue = NSNumber.init(value: 0)
         let animationGroup = CAAnimationGroup.init()

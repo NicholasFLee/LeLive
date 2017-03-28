@@ -15,15 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        let vc = HomeViewController()
-        let ac = AudioViewController()
-        let anc = UINavigationController.init(rootViewController: ac)
-        let vnc = UINavigationController.init(rootViewController: vc)
-        let tabBarC = UITabBarController.init()
-        tabBarC.viewControllers = [vnc, anc]
+//        let vc = VideoViewController()
+//        let ac = AudioViewController()
+//        let anc = UINavigationController.init(rootViewController: ac)
+//        let vnc = UINavigationController.init(rootViewController: vc)
+//        let tabBarC = UITabBarController.init()
+//        tabBarC.viewControllers = [vnc, anc]
+        
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = tabBarC
+//        self.window?.rootViewController = tabBarC
+        self.window?.rootViewController = HomeViewController()
         self.window?.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.window?.makeKeyAndVisible()
 

@@ -18,9 +18,9 @@ class AudioViewController: UIViewController {
     
     var audioPlayer = AVPlayer() {
         willSet {
-            print("status info:\(audioPlayer.observationInfo)")
+//            print("status info:\(audioPlayer.observationInfo)")
             if (audioPlayer.observationInfo != nil) {
-                print("status info:\(audioPlayer.observationInfo!)")
+//                print("status info:\(audioPlayer.observationInfo!)")
                 audioPlayer.removeObserver(self, forKeyPath: "status")
                 audioPlayer.removeObserver(self, forKeyPath: "timeControlStatus")
             }
@@ -94,7 +94,8 @@ class AudioViewController: UIViewController {
                 let url = URL.init(string: StreamURLS[0])!
                 self.audioPlayer = AVPlayer.init(url: url)
                 let cell = self.audioView.cellForItem(at: IndexPath.init(item: 0, section: 0)) as! AudioCell
-                cell.itemAnimationClosure()
+//                cell.itemAnimationClosure()
+                seCell = cell
             }
             self.audioPlayer.play()
             self.navigationItem.leftBarButtonItem?.image = #imageLiteral(resourceName: "stop")
@@ -132,7 +133,9 @@ class AudioViewController: UIViewController {
 
 
 
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
 
 
 }

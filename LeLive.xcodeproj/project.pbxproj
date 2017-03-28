@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		24989C8360D9AA9186D7E3B2 /* Pods_LeLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1725CA8E536C6F41A597F6 /* Pods_LeLive.framework */; };
-		E12109FB1E652EFB00BD816F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12109FA1E652EFB00BD816F /* HomeViewController.swift */; };
-		E12109FD1E65306900BD816F /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12109FC1E65306900BD816F /* LiveViewController.swift */; };
 		E1210A011E6530ED00BD816F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1210A001E6530ED00BD816F /* CoreVideo.framework */; };
 		E1210A031E65313900BD816F /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1210A021E65313900BD816F /* VideoToolbox.framework */; };
 		E1210A051E65314A00BD816F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1210A041E65314A00BD816F /* AudioToolbox.framework */; };
@@ -22,29 +20,30 @@
 		E1210A131E6531B600BD816F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1210A121E6531B600BD816F /* OpenGLES.framework */; };
 		E1210A161E6531DD00BD816F /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E1210A151E6531DD00BD816F /* libstdc++.tbd */; };
 		E1210A221E6532B400BD816F /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1210A211E6532B400BD816F /* IJKMediaFramework.framework */; };
-		E143CF181E7D9A15009A1FCE /* ItemIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E143CF171E7D9A15009A1FCE /* ItemIcon.xcassets */; };
-		E143CF1E1E7D9BF0009A1FCE /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E143CF1D1E7D9BF0009A1FCE /* AudioViewController.swift */; };
-		E18D1E591E7DAEB800888121 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D1E581E7DAEB800888121 /* AudioView.swift */; };
-		E18D1E5B1E7DB59500888121 /* AudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D1E5A1E7DB59500888121 /* AudioCell.swift */; };
-		E18D1E5D1E7DB9B800888121 /* AudioObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D1E5C1E7DB9B800888121 /* AudioObj.swift */; };
-		E18D1E5F1E7DC0F800888121 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D1E5E1E7DC0F800888121 /* Item.swift */; };
 		E1B31ACE1E641E4300ECEE2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B31ACD1E641E4300ECEE2C /* AppDelegate.swift */; };
 		E1B31AD31E641E4300ECEE2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1B31AD11E641E4300ECEE2C /* Main.storyboard */; };
 		E1B31AD51E641E4300ECEE2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B31AD41E641E4300ECEE2C /* Assets.xcassets */; };
 		E1B31AD81E641E4300ECEE2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1B31AD61E641E4300ECEE2C /* LaunchScreen.storyboard */; };
-		E1B31AF91E643EB100ECEE2C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B31AF81E643EB100ECEE2C /* Common.swift */; };
-		E1B31AFF1E64408C00ECEE2C /* LiveObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B31AFE1E64408C00ECEE2C /* LiveObj.swift */; };
-		E1B31B011E64411600ECEE2C /* CreatorObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B31B001E64411600ECEE2C /* CreatorObj.swift */; };
-		E1B31B041E646A1700ECEE2C /* LiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B31B031E646A1700ECEE2C /* LiveCell.xib */; };
-		E1B31B061E646A5800ECEE2C /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B31B051E646A5800ECEE2C /* LiveCell.swift */; };
+		E1E5337A1E8979EF00149CAF /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5335B1E8979EF00149CAF /* AudioViewController.swift */; };
+		E1E5337B1E8979EF00149CAF /* AudioObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5335D1E8979EF00149CAF /* AudioObj.swift */; };
+		E1E5337C1E8979EF00149CAF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5335E1E8979EF00149CAF /* Item.swift */; };
+		E1E5337D1E8979EF00149CAF /* AudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E533601E8979EF00149CAF /* AudioCell.swift */; };
+		E1E5337E1E8979EF00149CAF /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E533611E8979EF00149CAF /* AudioView.swift */; };
+		E1E5337F1E8979EF00149CAF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E533631E8979EF00149CAF /* Common.swift */; };
+		E1E533801E8979EF00149CAF /* CreatorObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E533671E8979EF00149CAF /* CreatorObj.swift */; };
+		E1E533811E8979EF00149CAF /* LiveObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E533681E8979EF00149CAF /* LiveObj.swift */; };
+		E1E533821E8979EF00149CAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5336C1E8979EF00149CAF /* HomeViewController.swift */; };
+		E1E533841E8979EF00149CAF /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E533701E8979EF00149CAF /* LiveViewController.swift */; };
+		E1E533851E8979EF00149CAF /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E533751E8979EF00149CAF /* VideoViewController.swift */; };
+		E1E533871E8979EF00149CAF /* LiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E533791E8979EF00149CAF /* LiveCell.xib */; };
+		E1E5338B1E897AB300149CAF /* ItemIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E5338A1E897AB300149CAF /* ItemIcon.xcassets */; };
+		E1E5338D1E897D6F00149CAF /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5338C1E897D6F00149CAF /* LiveCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		40B337175EEEB9064C1C7F67 /* Pods-LeLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeLive/Pods-LeLive.release.xcconfig"; sourceTree = "<group>"; };
 		4D1725CA8E536C6F41A597F6 /* Pods_LeLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73EA2BA069F4936E4C1E765 /* Pods-LeLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeLive/Pods-LeLive.debug.xcconfig"; sourceTree = "<group>"; };
-		E12109FA1E652EFB00BD816F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E12109FC1E65306900BD816F /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		E12109FE1E6530E300BD816F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		E1210A001E6530ED00BD816F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		E1210A021E65313900BD816F /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
@@ -58,24 +57,27 @@
 		E1210A121E6531B600BD816F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E1210A151E6531DD00BD816F /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		E1210A211E6532B400BD816F /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = LeLive/IJKMediaFramework.framework; sourceTree = "<group>"; };
-		E143CF171E7D9A15009A1FCE /* ItemIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ItemIcon.xcassets; sourceTree = "<group>"; };
-		E143CF1D1E7D9BF0009A1FCE /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
-		E18D1E581E7DAEB800888121 /* AudioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
-		E18D1E5A1E7DB59500888121 /* AudioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioCell.swift; sourceTree = "<group>"; };
-		E18D1E5C1E7DB9B800888121 /* AudioObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioObj.swift; sourceTree = "<group>"; };
-		E18D1E5E1E7DC0F800888121 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E1B31ACA1E641E4300ECEE2C /* LeLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B31ACD1E641E4300ECEE2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1B31AD21E641E4300ECEE2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1B31AD41E641E4300ECEE2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		E1B31AD71E641E4300ECEE2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1B31AD91E641E4300ECEE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
-		E1B31AF81E643EB100ECEE2C /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		E1B31AFA1E643F1500ECEE2C /* LeLive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeLive-Bridging-Header.h"; sourceTree = "<group>"; };
-		E1B31AFE1E64408C00ECEE2C /* LiveObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveObj.swift; sourceTree = "<group>"; };
-		E1B31B001E64411600ECEE2C /* CreatorObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorObj.swift; sourceTree = "<group>"; };
-		E1B31B031E646A1700ECEE2C /* LiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveCell.xib; sourceTree = "<group>"; };
-		E1B31B051E646A5800ECEE2C /* LiveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
+		E1E5335B1E8979EF00149CAF /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		E1E5335D1E8979EF00149CAF /* AudioObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioObj.swift; sourceTree = "<group>"; };
+		E1E5335E1E8979EF00149CAF /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E1E533601E8979EF00149CAF /* AudioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioCell.swift; sourceTree = "<group>"; };
+		E1E533611E8979EF00149CAF /* AudioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
+		E1E533631E8979EF00149CAF /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		E1E533651E8979EF00149CAF /* LeLive-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LeLive-Bridging-Header.h"; sourceTree = "<group>"; };
+		E1E533671E8979EF00149CAF /* CreatorObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorObj.swift; sourceTree = "<group>"; };
+		E1E533681E8979EF00149CAF /* LiveObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveObj.swift; sourceTree = "<group>"; };
+		E1E5336C1E8979EF00149CAF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E1E533701E8979EF00149CAF /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		E1E533751E8979EF00149CAF /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		E1E533791E8979EF00149CAF /* LiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveCell.xib; sourceTree = "<group>"; };
+		E1E5338A1E897AB300149CAF /* ItemIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ItemIcon.xcassets; sourceTree = "<group>"; };
+		E1E5338C1E897D6F00149CAF /* LiveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,42 +134,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E143CF191E7D9B51009A1FCE /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				E143CF1B1E7D9B51009A1FCE /* Models */,
-				E143CF1C1E7D9B51009A1FCE /* Views */,
-				E143CF1A1E7D9B51009A1FCE /* Controllers */,
-			);
-			path = Audio;
-			sourceTree = "<group>";
-		};
-		E143CF1A1E7D9B51009A1FCE /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E143CF1D1E7D9BF0009A1FCE /* AudioViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E143CF1B1E7D9B51009A1FCE /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				E18D1E5C1E7DB9B800888121 /* AudioObj.swift */,
-				E18D1E5E1E7DC0F800888121 /* Item.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		E143CF1C1E7D9B51009A1FCE /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E18D1E581E7DAEB800888121 /* AudioView.swift */,
-				E18D1E5A1E7DB59500888121 /* AudioCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		E1B31AC11E641E4300ECEE2C = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				E1B31ACD1E641E4300ECEE2C /* AppDelegate.swift */,
-				E1B31AE91E643E4B00ECEE2C /* Classes */,
+				E1E533581E8979EF00149CAF /* Classes */,
 				E1B31AE61E642FE000ECEE2C /* Supporting Files */,
 			);
 			path = LeLive;
@@ -201,7 +167,7 @@
 			children = (
 				E1B31AD11E641E4300ECEE2C /* Main.storyboard */,
 				E1B31AD41E641E4300ECEE2C /* Assets.xcassets */,
-				E143CF171E7D9A15009A1FCE /* ItemIcon.xcassets */,
+				E1E5338A1E897AB300149CAF /* ItemIcon.xcassets */,
 				E1B31AD61E641E4300ECEE2C /* LaunchScreen.storyboard */,
 				E1B31AD91E641E4300ECEE2C /* Info.plist */,
 			);
@@ -209,117 +175,169 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		E1B31AE91E643E4B00ECEE2C /* Classes */ = {
+		E1E533581E8979EF00149CAF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E1B31AEA1E643E4B00ECEE2C /* Common */,
-				E1B31AEF1E643E4B00ECEE2C /* Home */,
-				E1B31AF31E643E4B00ECEE2C /* Live */,
-				E143CF191E7D9B51009A1FCE /* Audio */,
+				E1E533591E8979EF00149CAF /* Audio */,
+				E1E533621E8979EF00149CAF /* Common */,
+				E1E5336A1E8979EF00149CAF /* Home */,
+				E1E5336E1E8979EF00149CAF /* Live */,
+				E1E533731E8979EF00149CAF /* Video */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		E1B31AEA1E643E4B00ECEE2C /* Common */ = {
+		E1E533591E8979EF00149CAF /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				E1B31AF81E643EB100ECEE2C /* Common.swift */,
-				E1B31AFA1E643F1500ECEE2C /* LeLive-Bridging-Header.h */,
-				E1B31AEB1E643E4B00ECEE2C /* Controllers */,
-				E1B31AED1E643E4B00ECEE2C /* Models */,
-				E1B31AEE1E643E4B00ECEE2C /* Views */,
+				E1E5335A1E8979EF00149CAF /* Controllers */,
+				E1E5335C1E8979EF00149CAF /* Models */,
+				E1E5335F1E8979EF00149CAF /* Views */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		E1E5335A1E8979EF00149CAF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1E5335B1E8979EF00149CAF /* AudioViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E1E5335C1E8979EF00149CAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1E5335D1E8979EF00149CAF /* AudioObj.swift */,
+				E1E5335E1E8979EF00149CAF /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E1E5335F1E8979EF00149CAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1E533601E8979EF00149CAF /* AudioCell.swift */,
+				E1E533611E8979EF00149CAF /* AudioView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E1E533621E8979EF00149CAF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E1E533631E8979EF00149CAF /* Common.swift */,
+				E1E533651E8979EF00149CAF /* LeLive-Bridging-Header.h */,
+				E1E533641E8979EF00149CAF /* Controllers */,
+				E1E533661E8979EF00149CAF /* Models */,
+				E1E533691E8979EF00149CAF /* Views */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		E1B31AEB1E643E4B00ECEE2C /* Controllers */ = {
+		E1E533641E8979EF00149CAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		E1B31AED1E643E4B00ECEE2C /* Models */ = {
+		E1E533661E8979EF00149CAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E1B31AFE1E64408C00ECEE2C /* LiveObj.swift */,
-				E1B31B001E64411600ECEE2C /* CreatorObj.swift */,
+				E1E533671E8979EF00149CAF /* CreatorObj.swift */,
+				E1E533681E8979EF00149CAF /* LiveObj.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		E1B31AEE1E643E4B00ECEE2C /* Views */ = {
+		E1E533691E8979EF00149CAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		E1B31AEF1E643E4B00ECEE2C /* Home */ = {
+		E1E5336A1E8979EF00149CAF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E1B31AF01E643E4B00ECEE2C /* Controllers */,
-				E1B31AF11E643E4B00ECEE2C /* Models */,
-				E1B31B021E646A1700ECEE2C /* Views */,
+				E1E5336B1E8979EF00149CAF /* Controllers */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		E1B31AF01E643E4B00ECEE2C /* Controllers */ = {
+		E1E5336B1E8979EF00149CAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E12109FA1E652EFB00BD816F /* HomeViewController.swift */,
+				E1E5336C1E8979EF00149CAF /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		E1B31AF11E643E4B00ECEE2C /* Models */ = {
+		E1E5336E1E8979EF00149CAF /* Live */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		E1B31AF31E643E4B00ECEE2C /* Live */ = {
-			isa = PBXGroup;
-			children = (
-				E1B31AF41E643E4B00ECEE2C /* Controllers */,
-				E1B31AF51E643E4B00ECEE2C /* Models */,
-				E1B31AF61E643E4B00ECEE2C /* Views */,
+				E1E5336F1E8979EF00149CAF /* Controllers */,
+				E1E533711E8979EF00149CAF /* Models */,
+				E1E533721E8979EF00149CAF /* Views */,
 			);
 			path = Live;
 			sourceTree = "<group>";
 		};
-		E1B31AF41E643E4B00ECEE2C /* Controllers */ = {
+		E1E5336F1E8979EF00149CAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E12109FC1E65306900BD816F /* LiveViewController.swift */,
+				E1E533701E8979EF00149CAF /* LiveViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		E1B31AF51E643E4B00ECEE2C /* Models */ = {
+		E1E533711E8979EF00149CAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		E1B31AF61E643E4B00ECEE2C /* Views */ = {
+		E1E533721E8979EF00149CAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		E1B31B021E646A1700ECEE2C /* Views */ = {
+		E1E533731E8979EF00149CAF /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				E1B31B031E646A1700ECEE2C /* LiveCell.xib */,
-				E1B31B051E646A5800ECEE2C /* LiveCell.swift */,
+				E1E533741E8979EF00149CAF /* Controllers */,
+				E1E533761E8979EF00149CAF /* Models */,
+				E1E533771E8979EF00149CAF /* Views */,
 			);
-			name = Views;
-			path = Models/Views;
+			path = Video;
+			sourceTree = "<group>";
+		};
+		E1E533741E8979EF00149CAF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1E533751E8979EF00149CAF /* VideoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E1E533761E8979EF00149CAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E1E533771E8979EF00149CAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1E5338C1E897D6F00149CAF /* LiveCell.swift */,
+				E1E533791E8979EF00149CAF /* LiveCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,9 +404,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E143CF181E7D9A15009A1FCE /* ItemIcon.xcassets in Resources */,
+				E1E5338B1E897AB300149CAF /* ItemIcon.xcassets in Resources */,
+				E1E533871E8979EF00149CAF /* LiveCell.xib in Resources */,
 				E1B31AD81E641E4300ECEE2C /* LaunchScreen.storyboard in Resources */,
-				E1B31B041E646A1700ECEE2C /* LiveCell.xib in Resources */,
 				E1B31AD51E641E4300ECEE2C /* Assets.xcassets in Resources */,
 				E1B31AD31E641E4300ECEE2C /* Main.storyboard in Resources */,
 			);
@@ -449,18 +467,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1B31B011E64411600ECEE2C /* CreatorObj.swift in Sources */,
-				E1B31B061E646A5800ECEE2C /* LiveCell.swift in Sources */,
-				E12109FD1E65306900BD816F /* LiveViewController.swift in Sources */,
+				E1E5337C1E8979EF00149CAF /* Item.swift in Sources */,
+				E1E5337E1E8979EF00149CAF /* AudioView.swift in Sources */,
+				E1E533851E8979EF00149CAF /* VideoViewController.swift in Sources */,
 				E1B31ACE1E641E4300ECEE2C /* AppDelegate.swift in Sources */,
-				E18D1E5F1E7DC0F800888121 /* Item.swift in Sources */,
-				E18D1E5D1E7DB9B800888121 /* AudioObj.swift in Sources */,
-				E18D1E5B1E7DB59500888121 /* AudioCell.swift in Sources */,
-				E18D1E591E7DAEB800888121 /* AudioView.swift in Sources */,
-				E1B31AF91E643EB100ECEE2C /* Common.swift in Sources */,
-				E143CF1E1E7D9BF0009A1FCE /* AudioViewController.swift in Sources */,
-				E1B31AFF1E64408C00ECEE2C /* LiveObj.swift in Sources */,
-				E12109FB1E652EFB00BD816F /* HomeViewController.swift in Sources */,
+				E1E5337A1E8979EF00149CAF /* AudioViewController.swift in Sources */,
+				E1E533811E8979EF00149CAF /* LiveObj.swift in Sources */,
+				E1E533821E8979EF00149CAF /* HomeViewController.swift in Sources */,
+				E1E5337B1E8979EF00149CAF /* AudioObj.swift in Sources */,
+				E1E5337D1E8979EF00149CAF /* AudioCell.swift in Sources */,
+				E1E533801E8979EF00149CAF /* CreatorObj.swift in Sources */,
+				E1E5337F1E8979EF00149CAF /* Common.swift in Sources */,
+				E1E5338D1E897D6F00149CAF /* LiveCell.swift in Sources */,
+				E1E533841E8979EF00149CAF /* LiveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
