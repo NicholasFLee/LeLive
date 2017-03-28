@@ -46,7 +46,7 @@ class AudioCell: UICollectionViewCell {
     
     func itemAnimation() {
         iview.backgroundColor = #colorLiteral(red: 0.6709846616, green: 0.9441583855, blue: 0.9764705896, alpha: 1)
-        iview.layer.cornerRadius = 60
+        iview.layer.cornerRadius = self.bounds.width / 2
         let animationScale = CABasicAnimation.init(keyPath: "transform.scale")
         animationScale.fromValue = NSNumber.init(value: 0.6)
         animationScale.toValue = NSNumber.init(value: 1.3)

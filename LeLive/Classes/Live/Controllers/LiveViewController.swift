@@ -41,10 +41,10 @@ class LiveViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        player.pause()
-        player.shutdown()
         self.navigationController?.setNavigationBarHidden(false, animated:false)
         self.tabBarController?.tabBar.isHidden = false
+        player.pause()
+        player.shutdown()
     }
 
     

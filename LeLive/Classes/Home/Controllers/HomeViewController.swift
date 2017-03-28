@@ -13,10 +13,11 @@ let ENDX = (2 / 3) * WIDTH
 let HALFENDX = 0.5 * ENDX
 let TWOENDX = 0.2 * ENDX
 let NINEENDX = 0.9 * ENDX
-var FROMX: CGFloat = 0
+var CLOSEFROMX: CGFloat = 0
+var OPENFROMX: CGFloat = 0
 var MOVEMAXX: CGFloat = 0
 
-class HomeViewController: UITableViewController {
+class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
     
     let containView = UIView.init(frame: BOUNDS)
     var currentPage = 0
@@ -25,6 +26,7 @@ class HomeViewController: UITableViewController {
     let AudioVC = UINavigationController.init(rootViewController: AudioViewController())
     var atBegin = true
     var atEnd = false
+    var backCurrentX: CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,44 +43,63 @@ class HomeViewController: UITableViewController {
         containView.addSubview(VideoVC.view)
     }
     
-    
-    
     func pan(pg: UIPanGestureRecognizer) {
         print("currentX: \(currentX)")
         let location = pg.location(in: self.view)
         let veloX = pg.velocity(in: view).x
         if pg.state.rawValue == 1 {
-            FROMX = location.x
+            if atBegin {
+                CLOSEFROMX = location.x
+            } else if atEnd {
+                OPENFROMX = location.x
+            }
         }
         if (atBegin && veloX < 0) || (atEnd && veloX > 0){
             return
         }
-        if location.x < ENDX {
-            if location.x > MOVEMAXX {
-                MOVEMAXX = location.x
-            }
-        } else {
-            MOVEMAXX = ENDX
-        }
-        
+//        if location.x < ENDX {
+//            if location.x > MOVEMAXX {
+//                MOVEMAXX = location.x
+//            }
+//        } else {
+//            MOVEMAXX = ENDX
+//        }
         if veloX > 0 {
-            currentX = location.x - FROMX
+            currentX = location.x - CLOSEFROMX
+            OPENFROMX = location.x
+            backCurrentX = currentX
         } else if veloX < 0 {
-//            containView.frame = CGRect.init(x: currentX - (MOVEMAXX - location.x), y: 0, width: WIDTH, height: HEIGHT)
-//            print("xxx: \(currentX)")
-            
+            if atEnd {
+                currentX = ENDX - (OPENFROMX - location.x)
+                CLOSEFROMX = location.x - currentX
+            } else {
+               currentX = backCurrentX - (OPENFROMX - location.x)
+            }
         }
         guard currentX >= 0 && currentX <= ENDX else {
             return
         }
+        if !atBegin && !atEnd {
+            
+            
+        }
+        
         containView.frame = CGRect.init(x: currentX, y: 0, width: WIDTH, height: HEIGHT)
-
+        
         atBegin = false
         atEnd = false
-
+        if currentX >= ENDX {
+            self.containView.frame = ENDBOUNDS
+            atEnd = true
+            currentX = ENDX
+        } else if currentX <= 0 {
+            self.containView.frame = BOUNDS
+            atBegin = true
+            currentX = 0
+        }
 
         // finger out of screen
-        if pg.state.rawValue == 3 {
+        if pg.state.rawValue == 3 || pg.state.rawValue == 4 {
             if veloX < 0 {
                 if currentX < NINEENDX{
                     UIView.animate(withDuration: 0.2, animations: {
@@ -110,6 +131,8 @@ class HomeViewController: UITableViewController {
             }
         }
         
+        print("movemaxX: \(MOVEMAXX)")
+        
         print("currentX: \(currentX)")
         
         print("begin: \(atBegin), end: \(atEnd)")
@@ -117,6 +140,8 @@ class HomeViewController: UITableViewController {
         print("locationX: \(location.x)")
         
         print("velocity: \(pg.velocity(in: self.view))")
+        
+        print("state: \(pg.state.hashValue), finger: \(pg.numberOfTouches)")
         
     }
 
