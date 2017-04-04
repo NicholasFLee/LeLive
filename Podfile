@@ -11,7 +11,10 @@ pod 'Alamofire'
 pod 'SnapKit'
 pod 'Kingfisher'
 pod 'SVProgressHUD'
-pod 'DGElasticPullToRefresh'
+#pod 'DGElasticPullToRefresh'
 pod 'AudioKit', '~> 3.5'
+pod 'MJRefresh'
+pod 'MMDrawerController', '~> 0.5.7'
+pod 'LFLiveKit'
 
 end

@@ -11,6 +11,8 @@ import UIKit
 class LiveViewController: UIViewController {
     
     var obj = LiveObj()
+    var dataSource = [LiveObj]()
+    var selectedIndex = 0
     var player = IJKFFMoviePlayerController()
     var bgi = UIImageView()
     override func viewDidLoad() {

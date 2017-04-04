@@ -1,4 +1,4 @@
-//
+
 //  Common.swift
 //  LeLive
 //
@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 import SVProgressHUD
-import DGElasticPullToRefresh
+//import DGElasticPullToRefresh
 import Kingfisher
 import SnapKit
 

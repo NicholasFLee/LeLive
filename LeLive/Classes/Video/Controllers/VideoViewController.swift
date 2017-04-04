@@ -8,24 +8,41 @@
 
 import UIKit
 import SVProgressHUD
-import DGElasticPullToRefresh
+//import DGElasticPullToRefresh
+import MJRefresh
 
 let CELLHEIGHT: CGFloat = 500.0
+let INPAGE = 20
 
 class VideoViewController: UITableViewController {
 
     var dataSource = NSMutableArray()
+    var currentDSCount = INPAGE
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.7036997676, green: 0.9950520396, blue: 0.9879503846, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         SVProgressHUD.show(withStatus: "加载数据中!")
         self.title = "List"
         self.tableView.separatorStyle = .none
         _ = LiveObj.init(a: dataSource, t: self.tableView)
         self.tableView.register(UINib.init(nibName: "LiveCell", bundle: nil), forCellReuseIdentifier: "reuseIdentifier")
-        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+//        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+//        loadingView.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
+        self.tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: {
+            if self.currentDSCount < 100 {
+                
+            
+                self.currentDSCount += INPAGE
+                self.tableView.setNeedsLayout()
+            }
+        })
+        
+        
+        // pull to refresh
+        /*
         tableView.dg_addPullToRefreshWithActionHandler({
             if canRefresh {
                 canRefresh = false
@@ -39,21 +56,22 @@ class VideoViewController: UITableViewController {
             }
             self.tableView.dg_stopLoading()
         }, loadingView: loadingView)
-        
         tableView.dg_setPullToRefreshFillColor(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))
         tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
-        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.7036997676, green: 0.9950520396, blue: 0.9879503846, alpha: 1)
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        */
+        
+        
     }
     
+    // remove pull
     deinit {
-        tableView.dg_removePullToRefresh()
+//        tableView.dg_removePullToRefresh()
     }
     
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return currentDSCount//dataSource.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

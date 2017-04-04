@@ -16,6 +16,8 @@ let NINEENDX = 0.9 * ENDX
 var CLOSEFROMX: CGFloat = 0
 var OPENFROMX: CGFloat = 0
 var MOVEMAXX: CGFloat = 0
+var atBegin = true
+var atEnd = false
 
 class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
     
@@ -24,8 +26,6 @@ class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
     var currentX: CGFloat = 0.0
     let VideoVC = UINavigationController.init(rootViewController: VideoViewController())
     let AudioVC = UINavigationController.init(rootViewController: AudioViewController())
-    var atBegin = true
-    var atEnd = false
     var backCurrentX: CGFloat = 0.0
     
     override func viewDidLoad() {
@@ -57,13 +57,14 @@ class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
         if (atBegin && veloX < 0) || (atEnd && veloX > 0){
             return
         }
-//        if location.x < ENDX {
-//            if location.x > MOVEMAXX {
-//                MOVEMAXX = location.x
-//            }
-//        } else {
-//            MOVEMAXX = ENDX
-//        }
+        if atEnd {
+            UIView.animate(withDuration: 0.2, animations: {
+                self.containView.frame = BOUNDS
+            })
+            atEnd = false
+            atBegin = true
+            return
+        }
         if veloX > 0 {
             currentX = location.x - CLOSEFROMX
             OPENFROMX = location.x
@@ -80,7 +81,6 @@ class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
             return
         }
         if !atBegin && !atEnd {
-            
             
         }
         
@@ -130,19 +130,6 @@ class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
                 }
             }
         }
-        
-        print("movemaxX: \(MOVEMAXX)")
-        
-        print("currentX: \(currentX)")
-        
-        print("begin: \(atBegin), end: \(atEnd)")
-        
-        print("locationX: \(location.x)")
-        
-        print("velocity: \(pg.velocity(in: self.view))")
-        
-        print("state: \(pg.state.hashValue), finger: \(pg.numberOfTouches)")
-        
     }
 
     
@@ -185,15 +172,10 @@ class HomeViewController: UITableViewController, UIGestureRecognizerDelegate {
         if indexPath.row == 0 {
             currentPage = 0
             self.containView.addSubview(VideoVC.view)
-            
-            
         } else if indexPath.row == 1 {
             currentPage = 1
             self.containView.addSubview(AudioVC.view)
-            
         }
-        
-        
     }
     
     
