@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.3.0)
-  - AudioKit (3.5.3)
   - Kingfisher (3.5.0)
   - LFLiveKit (2.6)
   - MJRefresh (3.1.12)
@@ -21,7 +20,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - AudioKit (~> 3.5)
   - Kingfisher
   - LFLiveKit
   - MJRefresh
@@ -31,7 +29,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  AudioKit: bf2ebc611bb9b8107dcbe14f8356c761ee8fcc12
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
   LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -39,6 +36,6 @@ SPEC CHECKSUMS:
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: e6e3d190b4898c78e81b59dc73945ab54897bbdf
+PODFILE CHECKSUM: 293dbb419dddf6c47152deb32cf6288ccabdafd9
 
 COCOAPODS: 1.2.0

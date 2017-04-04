@@ -57,6 +57,9 @@ class LiveObj: NSObject {
             }
             canRefresh = true
             t.reloadData()
+            if t.mj_header.isRefreshing() {
+                t.mj_header.endRefreshing()
+            }
             SVProgressHUD.dismiss()
         }
     }

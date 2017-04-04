@@ -8,11 +8,10 @@
 
 import UIKit
 import SVProgressHUD
-//import DGElasticPullToRefresh
 import MJRefresh
 
 let CELLHEIGHT: CGFloat = 500.0
-let INPAGE = 20
+let INPAGE = 10
 
 class VideoViewController: UITableViewController {
 
@@ -26,48 +25,26 @@ class VideoViewController: UITableViewController {
         SVProgressHUD.show(withStatus: "加载数据中!")
         self.title = "List"
         self.tableView.separatorStyle = .none
+        
+//        navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(rightBarButtonDidClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "live", style: .done, target: self, action: #selector(rightBarButtonDidClick))
+        
         _ = LiveObj.init(a: dataSource, t: self.tableView)
         self.tableView.register(UINib.init(nibName: "LiveCell", bundle: nil), forCellReuseIdentifier: "reuseIdentifier")
-//        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-//        loadingView.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
+        self.tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
+                _ = LiveObj.init(a: self.dataSource, t: self.tableView)
+        })
         self.tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: {
-            if self.currentDSCount < 100 {
-                
-            
+            if self.currentDSCount < 200 {
                 self.currentDSCount += INPAGE
-                self.tableView.setNeedsLayout()
+                self.tableView.reloadData()
             }
         })
-        
-        
-        // pull to refresh
-        /*
-        tableView.dg_addPullToRefreshWithActionHandler({
-            if canRefresh {
-                canRefresh = false
-                _ = LiveObj.init(a: self.dataSource, t: self.tableView)
-                SVProgressHUD.setMaximumDismissTimeInterval(2)
-                SVProgressHUD.setDefaultMaskType(.gradient)
-                SVProgressHUD.showSuccess(withStatus: "刷新完成!")
-            } else {
-                SVProgressHUD.setMaximumDismissTimeInterval(2)
-                SVProgressHUD.showError(withStatus: "刚刚刷新过哦!")
-            }
-            self.tableView.dg_stopLoading()
-        }, loadingView: loadingView)
-        tableView.dg_setPullToRefreshFillColor(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))
-        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
-        */
-        
-        
     }
     
-    // remove pull
-    deinit {
-//        tableView.dg_removePullToRefresh()
+    func rightBarButtonDidClick() {
+        self.navigationController?.present(TransmitViewController(), animated: true, completion: nil)
     }
-    
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,13 +64,22 @@ class VideoViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.mj_header.isRefreshing() {
+            return
+        }
+        
         let l = LiveViewController()
         l.obj = dataSource[indexPath.row] as! LiveObj
         self.navigationController?.pushViewController(l, animated: true)
     }
-
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if self.tableView.mj_footer.isRefreshing() {
+            self.tableView.mj_footer.endRefreshing()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
 }

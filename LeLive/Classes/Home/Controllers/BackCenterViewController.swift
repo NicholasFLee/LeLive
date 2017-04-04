@@ -15,6 +15,7 @@ class BackCenterViewController: UIViewController {
     static let centerVC = BackCenterViewController()
     let videoNVC = UINavigationController.init(rootViewController: VideoViewController())
     let audioNVC = UINavigationController.init(rootViewController: AudioViewController())
+    let manualVC = ManualViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class BackCenterViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.addChildViewController(videoNVC)
         self.addChildViewController(audioNVC)
+        self.addChildViewController(manualVC)
         self.view.addSubview(videoNVC.view)
         
         
@@ -31,6 +33,8 @@ class BackCenterViewController: UIViewController {
                 self.view.addSubview(self.videoNVC.view)
             } else if i == 1 {
                 self.view.addSubview(self.audioNVC.view)
+            } else if i == 2 {
+                self.view.addSubview(self.manualVC.view)
             }
         }
         

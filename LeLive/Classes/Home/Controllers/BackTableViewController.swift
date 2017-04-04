@@ -28,7 +28,7 @@ class BackTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,6 +41,8 @@ class BackTableViewController: UITableViewController {
             cell.textLabel?.text = "Video"
         } else if indexPath.row == 1 {
             cell.textLabel?.text = "Audio"
+        } else if indexPath.row == 2 {
+            cell.textLabel?.text = "Manual"
         }
         return cell
     }
