@@ -16,6 +16,7 @@ class BackCenterViewController: UIViewController {
     let videoNVC = UINavigationController.init(rootViewController: VideoViewController())
     let audioNVC = UINavigationController.init(rootViewController: AudioViewController())
     let manualVC = ManualViewController()
+    let cameraVC = CameraViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,8 @@ class BackCenterViewController: UIViewController {
                 self.view.addSubview(self.audioNVC.view)
             } else if i == 2 {
                 self.view.addSubview(self.manualVC.view)
+            } else if i == 3 {
+                self.view.addSubview(self.cameraVC.view)
             }
         }
         

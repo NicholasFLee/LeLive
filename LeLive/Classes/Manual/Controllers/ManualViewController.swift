@@ -29,8 +29,10 @@ class ManualViewController: UIViewController {
         view.addSubview(ready)
         ready.addTarget(self, action: #selector(readyToCatch), for: .touchUpInside)
         
+
         
     }
+    
     //rtmp://192.168.0.100:1935/rtmplive/room
     func readyToCatch() {
         let s = "rtmp://\(addressText.text!):1935/rtmplive/room"

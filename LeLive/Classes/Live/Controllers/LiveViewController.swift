@@ -33,6 +33,24 @@ class LiveViewController: UIViewController {
         b.setTitleColor(UIColor.black, for: .normal)
         self.view.addSubview(b)
         b.addTarget(self, action: #selector(closeButtonDidClick), for: .touchUpInside)
+// from here
+/*
+        let localUrl = Bundle.main.url(forResource: "Dalshabet.mp4", withExtension: nil)
+        let netUrl = URL.init(string: obj.stream_addr)
+        let gpuMovie = GPUImageMovie.init(url: localUrl)
+        gpuMovie?.playAtActualSpeed = true
+        let filter = GPUImageToonFilter.init()
+        gpuMovie?.addTarget(filter)
+        
+        let filterView = GPUImageView.init(frame: BOUNDS)
+        view.addSubview(filterView)
+        
+        filter.addTarget(filterView)
+        
+        gpuMovie?.startProcessing()
+        
+    */
+        
     }
     
     func closeButtonDidClick() {

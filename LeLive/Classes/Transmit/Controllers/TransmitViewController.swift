@@ -9,12 +9,18 @@
 import UIKit
 import LFLiveKit
 
-var TRANSMITSTRING = " "
 
 class TransmitViewController: UIViewController, LFLiveSessionDelegate {
 
     let session = LFLiveSession.init(audioConfiguration: LFLiveAudioConfiguration.default(), videoConfiguration: LFLiveVideoConfiguration.defaultConfiguration(for: .medium2))
     let streamInfo = LFLiveStreamInfo.init()
+/*
+    var camera = GPUImageVideoCamera.init(sessionPreset: AVCaptureSessionPreset640x480, cameraPosition: AVCaptureDevicePosition.front)
+    
+    var filter = GPUImageFilter.init()
+    var filterView = GPUImageView.init(frame: BOUNDS)
+*/    
+    
     let addressText = UITextField.init(frame: CGRect.init(x: 30, y: 30, width: 300, height: 20))
     let signLabel = UILabel.init(frame: CGRect.init(x: 30, y: 60, width: 100, height: 20))
 
@@ -55,9 +61,16 @@ class TransmitViewController: UIViewController, LFLiveSessionDelegate {
         view.addSubview(signLabel)
     }
     
+    func useGPUImage() {
+        
+        
+        
+    }
+    
+    
+    
     func startTransmit() {
         let s = "rtmp://\(addressText.text!):1935/rtmplive/room"
-        TRANSMITSTRING = s
         streamInfo.url = s
         session?.startLive(streamInfo)
         signLabel.text = "Playing"

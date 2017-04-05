@@ -5,3 +5,4 @@
 
 
 #import <IJKMediaFramework/IJKMediaFramework.h>
+#import "GPUImage.h"

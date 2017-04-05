@@ -18,6 +18,7 @@ class BackTableViewController: UITableViewController {
 //        tableView.backgroundColor = UIColor.black
         tableView.separatorStyle = .none
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: backReuse)
+        tableView.showsVerticalScrollIndicator = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,21 +29,21 @@ class BackTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: backReuse, for: indexPath)
         cell.selectionStyle = .none
         cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
-//        cell.textLabel?.textColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-//        cell.backgroundColor = UIColor.black
         if indexPath.row == 0 {
             cell.textLabel?.text = "Video"
         } else if indexPath.row == 1 {
             cell.textLabel?.text = "Audio"
         } else if indexPath.row == 2 {
             cell.textLabel?.text = "Manual"
+        } else if indexPath.row == 3 {
+            cell.textLabel?.text = "Camera"
         }
         return cell
     }
