@@ -43,7 +43,7 @@ class TransmitViewController: UIViewController, LFLiveSessionDelegate {
         view.addSubview(start)
         start.addTarget(self, action: #selector(startTransmit), for: .touchUpInside)
         
-        addressText.text = "rtmp://192.168.0.108:1935/rtmplive/room"
+        addressText.text = "192.168.0.100"
         addressText.backgroundColor = UIColor.clear
         addressText.textColor = UIColor.white
         addressText.keyboardType = .URL
@@ -52,12 +52,13 @@ class TransmitViewController: UIViewController, LFLiveSessionDelegate {
         
         signLabel.textColor = UIColor.white
         signLabel.text = "Not Playing"
-        
+        view.addSubview(signLabel)
     }
     
     func startTransmit() {
-        TRANSMITSTRING = addressText.text!
-        streamInfo.url = addressText.text
+        let s = "rtmp://\(addressText.text!):1935/rtmplive/room"
+        TRANSMITSTRING = s
+        streamInfo.url = s
         session?.startLive(streamInfo)
         signLabel.text = "Playing"
     }

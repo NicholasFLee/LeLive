@@ -31,9 +31,9 @@ class ManualViewController: UIViewController {
         
         
     }
-    
+    //rtmp://192.168.0.100:1935/rtmplive/room
     func readyToCatch() {
-        let s = "rtmp://\(addressText.text):1935/rtmplive/room"
+        let s = "rtmp://\(addressText.text!):1935/rtmplive/room"
         player = IJKFFMoviePlayerController(contentURLString: s, with: nil)
         player.view.frame = BOUNDS
         self.view.insertSubview(player.view, at: 0)
