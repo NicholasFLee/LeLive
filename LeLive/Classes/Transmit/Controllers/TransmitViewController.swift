@@ -61,11 +61,6 @@ class TransmitViewController: UIViewController, LFLiveSessionDelegate {
         view.addSubview(signLabel)
     }
     
-    func useGPUImage() {
-        
-        
-        
-    }
     
     
     
@@ -92,6 +87,24 @@ class TransmitViewController: UIViewController, LFLiveSessionDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         addressText.resignFirstResponder()
     }
+    
+
+//    func isContainArray(array: [Any]) -> Bool {
+//        return true
+//    }
+//    
+//    func count(array: [Any]) -> Int {
+//        var count = 0
+//        
+//        for i in array {
+//            //判断不是数组
+//            count += 1
+//            continue
+//            //是数组
+//            count += count(arr: /*i*/arr)
+//        }
+//        return count
+//    }
 
     
 }

@@ -43,13 +43,13 @@ class BackTableViewController: UITableViewController {
         } else if indexPath.row == 2 {
             cell.textLabel?.text = "Manual"
         } else if indexPath.row == 3 {
-            cell.textLabel?.text = "Camera"
+            cell.textLabel?.text = "Filter"
         }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 150
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

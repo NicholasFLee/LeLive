@@ -23,9 +23,7 @@
 		E1210A161E6531DD00BD816F /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E1210A151E6531DD00BD816F /* libstdc++.tbd */; };
 		E1210A221E6532B400BD816F /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1210A211E6532B400BD816F /* IJKMediaFramework.framework */; };
 		E13588011E941576006C265F /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E12109FE1E6530E300BD816F /* CoreAudio.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		E165F9FC1E9509A4009C2EF6 /* FilterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165F9FB1E9509A4009C2EF6 /* FilterCollectionView.swift */; };
 		E1A0F8B11E94F174004A90B0 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A0F8B01E94F174004A90B0 /* libGPUImage.a */; };
-		E1A0FB2A1E95045B004A90B0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0FB291E95045B004A90B0 /* CameraViewController.swift */; };
 		E1B31ACE1E641E4300ECEE2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B31ACD1E641E4300ECEE2C /* AppDelegate.swift */; };
 		E1B31AD31E641E4300ECEE2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1B31AD11E641E4300ECEE2C /* Main.storyboard */; };
 		E1B31AD51E641E4300ECEE2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B31AD41E641E4300ECEE2C /* Assets.xcassets */; };
@@ -46,6 +44,9 @@
 		E1E533871E8979EF00149CAF /* LiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E533791E8979EF00149CAF /* LiveCell.xib */; };
 		E1E5338B1E897AB300149CAF /* ItemIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E5338A1E897AB300149CAF /* ItemIcon.xcassets */; };
 		E1E5338D1E897D6F00149CAF /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5338C1E897D6F00149CAF /* LiveCell.swift */; };
+		E1E701A81E9542ED009B3157 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E701A51E9542ED009B3157 /* FilterViewController.swift */; };
+		E1E701A91E9542ED009B3157 /* FilterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E701A71E9542ED009B3157 /* FilterCollectionView.swift */; };
+		E1F0CBF71E955B5D003AD302 /* Tahiti.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1F0CBF61E955B5D003AD302 /* Tahiti.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +69,6 @@
 		E1210A151E6531DD00BD816F /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		E1210A211E6532B400BD816F /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = LeLive/IJKMediaFramework.framework; sourceTree = "<group>"; };
 		E15BF34D1E94130C0089652D /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
-		E165F9FB1E9509A4009C2EF6 /* FilterCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionView.swift; sourceTree = "<group>"; };
 		E1A0F8B01E94F174004A90B0 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGPUImage.a; path = LeLive/libGPUImage.a; sourceTree = "<group>"; };
 		E1A0F8B51E94F471004A90B0 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
 		E1A0F8B61E94F471004A90B0 /* GPUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImage.h; sourceTree = "<group>"; };
@@ -242,7 +242,6 @@
 		E1A0F95E1E94F471004A90B0 /* GPUImageWhiteBalanceFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageWhiteBalanceFilter.h; sourceTree = "<group>"; };
 		E1A0F95F1E94F471004A90B0 /* GPUImageXYDerivativeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageXYDerivativeFilter.h; sourceTree = "<group>"; };
 		E1A0F9601E94F471004A90B0 /* GPUImageZoomBlurFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageZoomBlurFilter.h; sourceTree = "<group>"; };
-		E1A0FB291E95045B004A90B0 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		E1B31ACA1E641E4300ECEE2C /* LeLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B31ACD1E641E4300ECEE2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1B31AD21E641E4300ECEE2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -266,6 +265,9 @@
 		E1E533791E8979EF00149CAF /* LiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveCell.xib; sourceTree = "<group>"; };
 		E1E5338A1E897AB300149CAF /* ItemIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ItemIcon.xcassets; sourceTree = "<group>"; };
 		E1E5338C1E897D6F00149CAF /* LiveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
+		E1E701A51E9542ED009B3157 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		E1E701A71E9542ED009B3157 /* FilterCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionView.swift; sourceTree = "<group>"; };
+		E1F0CBF61E955B5D003AD302 /* Tahiti.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tahiti.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,14 +359,6 @@
 				E1192ADA1E93A2710093CB98 /* ManualViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E165F9FA1E950980009C2EF6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E165F9FB1E9509A4009C2EF6 /* FilterCollectionView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		E1A0F8B21E94F471004A90B0 /* usr */ = {
@@ -563,23 +557,6 @@
 			path = include;
 			sourceTree = "<group>";
 		};
-		E1A0FB241E950413004A90B0 /* Camera */ = {
-			isa = PBXGroup;
-			children = (
-				E165F9FA1E950980009C2EF6 /* Views */,
-				E1A0FB251E950413004A90B0 /* Controllers */,
-			);
-			path = Camera;
-			sourceTree = "<group>";
-		};
-		E1A0FB251E950413004A90B0 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E1A0FB291E95045B004A90B0 /* CameraViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		E1B31AC11E641E4300ECEE2C = {
 			isa = PBXGroup;
 			children = (
@@ -611,6 +588,7 @@
 		E1B31AE61E642FE000ECEE2C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E1F0CBF61E955B5D003AD302 /* Tahiti.mp4 */,
 				E1B31AD11E641E4300ECEE2C /* Main.storyboard */,
 				E1B31AD41E641E4300ECEE2C /* Assets.xcassets */,
 				E1E5338A1E897AB300149CAF /* ItemIcon.xcassets */,
@@ -631,7 +609,7 @@
 				E1E533731E8979EF00149CAF /* Video */,
 				E1192AD41E938D050093CB98 /* Transmit */,
 				E1192AD81E93A2500093CB98 /* Manual */,
-				E1A0FB241E950413004A90B0 /* Camera */,
+				E1E701A31E9542ED009B3157 /* Filter */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -791,6 +769,31 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E1E701A31E9542ED009B3157 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				E1E701A41E9542ED009B3157 /* Controllers */,
+				E1E701A61E9542ED009B3157 /* Views */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		E1E701A41E9542ED009B3157 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1E701A51E9542ED009B3157 /* FilterViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E1E701A61E9542ED009B3157 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1E701A71E9542ED009B3157 /* FilterCollectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -859,6 +862,7 @@
 				E1E533871E8979EF00149CAF /* LiveCell.xib in Resources */,
 				E1B31AD81E641E4300ECEE2C /* LaunchScreen.storyboard in Resources */,
 				E1B31AD51E641E4300ECEE2C /* Assets.xcassets in Resources */,
+				E1F0CBF71E955B5D003AD302 /* Tahiti.mp4 in Resources */,
 				E1B31AD31E641E4300ECEE2C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -923,7 +927,7 @@
 				E1E533851E8979EF00149CAF /* VideoViewController.swift in Sources */,
 				E1B31ACE1E641E4300ECEE2C /* AppDelegate.swift in Sources */,
 				E1E5337A1E8979EF00149CAF /* AudioViewController.swift in Sources */,
-				E165F9FC1E9509A4009C2EF6 /* FilterCollectionView.swift in Sources */,
+				E1E701A91E9542ED009B3157 /* FilterCollectionView.swift in Sources */,
 				E1E533811E8979EF00149CAF /* LiveObj.swift in Sources */,
 				E1CD75251E923792005D6764 /* BackTableViewController.swift in Sources */,
 				E1E533821E8979EF00149CAF /* HomeViewController.swift in Sources */,
@@ -931,12 +935,12 @@
 				E1E5337B1E8979EF00149CAF /* AudioObj.swift in Sources */,
 				E1E5337D1E8979EF00149CAF /* AudioCell.swift in Sources */,
 				E1E533801E8979EF00149CAF /* CreatorObj.swift in Sources */,
+				E1E701A81E9542ED009B3157 /* FilterViewController.swift in Sources */,
 				E1E5337F1E8979EF00149CAF /* Common.swift in Sources */,
 				E1E5338D1E897D6F00149CAF /* LiveCell.swift in Sources */,
 				E1192ADB1E93A2710093CB98 /* ManualViewController.swift in Sources */,
 				E1E533841E8979EF00149CAF /* LiveViewController.swift in Sources */,
 				E1CD75271E923BC8005D6764 /* BackCenterViewController.swift in Sources */,
-				E1A0FB2A1E95045B004A90B0 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

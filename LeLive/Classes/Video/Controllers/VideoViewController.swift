@@ -26,7 +26,6 @@ class VideoViewController: UITableViewController {
         self.title = "List"
         self.tableView.separatorStyle = .none
         
-//        navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(rightBarButtonDidClick))
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "live", style: .done, target: self, action: #selector(rightBarButtonDidClick))
         
         _ = LiveObj.init(a: dataSource, t: self.tableView)

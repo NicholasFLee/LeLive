@@ -9,7 +9,6 @@
 import Foundation
 import Alamofire
 import SVProgressHUD
-//import DGElasticPullToRefresh
 import Kingfisher
 import SnapKit
 

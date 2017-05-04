@@ -16,7 +16,7 @@ class BackCenterViewController: UIViewController {
     let videoNVC = UINavigationController.init(rootViewController: VideoViewController())
     let audioNVC = UINavigationController.init(rootViewController: AudioViewController())
     let manualVC = ManualViewController()
-    let cameraVC = CameraViewController()
+    let filterVC = FilterViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,7 @@ class BackCenterViewController: UIViewController {
         self.addChildViewController(videoNVC)
         self.addChildViewController(audioNVC)
         self.addChildViewController(manualVC)
+        self.addChildViewController(filterVC)
         self.view.addSubview(videoNVC.view)
         
         
@@ -37,7 +38,7 @@ class BackCenterViewController: UIViewController {
             } else if i == 2 {
                 self.view.addSubview(self.manualVC.view)
             } else if i == 3 {
-                self.view.addSubview(self.cameraVC.view)
+                self.view.addSubview(self.filterVC.view)
             }
         }
         

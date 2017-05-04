@@ -47,7 +47,6 @@ class AudioViewController: UIViewController {
             self.loadingIv.layer.add(self.loadingAnimation(), forKey: nil)
             self.loadingIv.frame = CGRect.init(x: 19.5, y: 4.5, width: 33, height: 33)
             self.navigationController?.navigationBar.addSubview(self.loadingIv)
-//            if self.audioPlayer.status == .readyToPlay {}
         }
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: #imageLiteral(resourceName: "play"), style: .plain, target: self, action: #selector(leftBarButtonDidClick))
@@ -132,10 +131,6 @@ class AudioViewController: UIViewController {
     }
 
 
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-    }
 
 
 }
